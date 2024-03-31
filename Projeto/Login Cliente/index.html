@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @font-face {
+      font-family: Poppins;
+      src: url(Poppins-Regular.ttf);
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Poppins, sans-serif;
+      background: url(vec.png);
+    
+      
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 300px;
+      
+      height: auto;
+      margin: 100px auto;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      display: flex; /* Adicionado */
+      flex-direction: column; /* Adicionado */
+      justify-content: center; /* Adicionado */
+      align-items: center; /* Adicionado */
+    }
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #fff;
+      border-radius: 20px;
+      border: 2.5px solid #FA856E;
+      z-index: -1;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      width: 100%;
+     
+    }
+
+    .input-group label {
+      font-size: 1em;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 5px;
+      display: block;
+      
+    }
+
+    .input-group input {
+      width: calc(100% - 22px); /* Ajuste para compensar o padding */
+      padding: 10px;
+     
+      border-radius: 10px;
+      font-size: 1em;
+      border: 2px solid #FA856E;
+      border-left: 7px solid #FA856E;
+    }
+
+    .submit-button {
+      width: 90%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: #4CAF50;
+      color: #fff;
+      font-size: 1em;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-button:hover {
+      background: #45a049;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .forgot-password {
+      text-align: right;
+      font-size: 0.9em;
+      color: #555;
+      text-decoration: none;
+    }
+
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+
+    .other-options {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .other-options button {
+      background-color: transparent;
+      border: 1px solid #FA856E;
+      color: #FA856E;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 10px;
+     
+      
+     
+    }
+   
+.btn1{
+  display: flex;
+  align-items: center;
+  
+}
+    .other-options button:hover {
+      background-color: #FA856E;
+      color: #fff;
+    }
+
+    .separation-line {
+      width: 100%;
+      border-bottom: 2px solid #FA856E;
+      margin-bottom: 20px ;
+      margin-top: -5px;
+    }
+    .separation-line1 {
+      width: 50%;
+      border-bottom: 2px solid #FA856E;
+      margin: 20px auto;
+    }
+
+    .services-text {
+      text-align: center;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .container {
+        padding: 20px;
+        margin: 50px auto;
+        
+      }
+    }
+    .quad{
+     
+      background-color: white;
+      width: 10px;
+      height: 15px;
+      cursor: pointer;
+    }
+   .isenha{
+    display: flex;
+    flex-direction: row;
+   }
+   .isenha img{
+    max-width: 25px; 
+    max-height: 25px;
+   }
+  </style>
+</head>
+
+<body >
+
+  <div class="container">
+    <div class="background"></div>
+    <img src="logo.png" alt="Logo" style="display: block; margin: 0 auto; width: 50%;">
+    <div class="services-text"><h2>Entre e descubra os nossos serviços e produtos para sua festa!</h2></div>
+  
+    <div class="input-group">
+      <label for="username">Email</label>
+      <input type="text" id="username" name="username" placeholder="Ex: email@gmail.com">
+    </div>
+    <div class="input-group">
+      <label  for="password">Senha </label>
+      
+      <input    type="password" id="password" name="password">
+    
+     
+    </div>
+    
+    <div class="input-group forgot-password">
+      <button class="quad"></button> <a href="#" > Lembre senha</a>
+      <a href="#" style="padding-left: 17%;">Esqueci a senha</a>
+    </div>
+    
+    <button class="submit-button" type="submit">Entrar</button>
+    <div  class="separation-line1"></div>
+    <div class="separation-line"></div>
+   <a href="#">Quero me cadastrar</a>
+    <div class="other-options">
+      <button class="btn1"><img src="google.png" alt="" srcset="" style="padding-right: 10px; ">Entre com o Google</button>
+      <br>
+      <button class="btn1" style="padding-right: 33px;"><img src="apple.png" alt="" srcset="" style="padding-right: 10px; "> Entre com a Apple</button>
+    </div>
+  </div>
+  
+</body>
+
+</html>
