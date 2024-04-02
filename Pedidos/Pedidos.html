@@ -4,124 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja Virtual</title>
-    <style>
-        /* Estilos CSS para a apresentação */
-       @font-face {
-        font-family: Poppins;
-        src: url(Poppins-Regular.ttf);
-       }
-        body {
-            font-family: Poppins, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            
-        }
-
-        .header {
-            background-color: #FFA500; /* Cor laranja */
-            padding: 5px;
-            text-align: center;
-            color: #fff; /* Cor do texto */
-            border-top-left-radius: 35px;
-            border-top-right-radius: 35px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            grid-gap: 20px;
-        }
-        .product {
-            background-color: #fff;
-            border: 5px solid #FFA500; /* Adicionando a borda */
-            border-radius: 22px;        
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .product img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-        .product span, p {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
-            color: #333;
-            font-size: 15px;
-        }
-        .add-to-cart {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 8px 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .add-to-cart:hover {
-            background-color: #0056b3;
-        }
-        .cart {
-            background-color: #fff;
-            border: 5px solid #FF944E; /* Adicionando a borda */
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .cart h2 {
-            color: #333;
-        }
-        .cart-items {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        .cart-items li {
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .checkout {
-            background-color: #28a745;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .checkout:hover {
-            background-color: #218838;
-        }
-        .inpt{
-          width: 45px;;
-        
-          margin: 10px;
-        }
-    </style>
+<link rel="stylesheet" href="style.css">
+<!--css bootstrap-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!--js bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    
   <div class="header">
     <h1>Pedidos</h1>
+   
   </div>
   <div class="container">
-    <h2>Produtos</h2>
+<div class="filters">
+    <h2>Produtos</h2>  
+    <input class="inpt2" type="text" placeholder="Pesquisar...">
+    <select name="comidas" id="comidas" aria-placeholder="comidas" class="filter">
+        <option value="Salgados">Salgados</option>
+        <option value="Bebidas">Bebidas</option>
+        <option value="Doce">Doce</option>
+    </select>
+</div>
+   
     <div class="products">
         <div class="product" data-name="Coxinha">
-            <img src="https://via.placeholder.com/100" alt="Camisa">
+            <img src="img/360_F_225924860_fldfRohs3Lmmq4orkFWLvIdD5TOvBXMh.jpg" alt="Camisa">
             <span>Coxinha Lorem</span>
             <p>Preço: R$10,00</p>
            
@@ -129,7 +37,7 @@
             <button class="add-to-cart">Adicionar ao Carrinho</button>
         </div>
         <div class="product" data-name="Empada">
-            <img src="https://via.placeholder.com/100" alt="Calça">
+            <img src="img/empada.jpg" alt="Calça">
             <span>Empada Lorem</span>
             <p>Preço: R$10,00</p>
            
@@ -139,7 +47,7 @@
             <button class="add-to-cart">Adicionar ao Carrinho</button>
         </div>
         <div class="product" data-name="Pastel">
-          <img src="https://via.placeholder.com/100" alt="Calça">
+          <img src="img/pastel.jpg" alt="Calça">
           <span>pastel Lorem</span>
 
           <p>Preço: R$10,00</p>
@@ -148,7 +56,7 @@
           <button class="add-to-cart">Adicionar ao Carrinho</button>
       </div>
       <div class="product" data-name="Esfirra">
-        <img src="https://via.placeholder.com/100" alt="Calça">
+        <img src="img/esfirra.jpg" alt="Calça">
         <span>Esfirra Lorem</span>
 
         <p>Preço: R$10,00</p>
@@ -157,7 +65,7 @@
         <button class="add-to-cart">Adicionar ao Carrinho</button>
     </div>
     <div class="product" data-name="Guaraná">
-      <img src="https://via.placeholder.com/100" alt="Calça">
+      <img src="img/guaraná.jpg" alt="Calça">
       <span>guaraná Lorem</span>
 
       <p>Preço: R$10,00</p>
@@ -168,7 +76,7 @@
 
 
   <div class="product" data-name="Coxinha">
-    <img src="https://via.placeholder.com/100" alt="Camisa">
+    <img src="img/360_F_225924860_fldfRohs3Lmmq4orkFWLvIdD5TOvBXMh.jpg" alt="Camisa">
     <span>Coxinha Lorem</span>
 
     <p>Preço: R$10,00</p>
@@ -177,7 +85,7 @@
     <button class="add-to-cart">Adicionar ao Carrinho</button>
 </div>
 <div class="product" data-name="Empada">
-    <img src="https://via.placeholder.com/100" alt="Calça">
+   <img src="img/empada.jpg" alt="Calça">
     <span>Empada Lorem</span>
 
     <p>Preço: R$10,00</p>
@@ -186,7 +94,7 @@
     <button class="add-to-cart">Adicionar ao Carrinho</button>
 </div>
 <div class="product" data-name="Pastel">
-  <img src="https://via.placeholder.com/100" alt="Calça">
+ <img src="img/pastel.jpg" alt="Calça">
   <span>pastel Lorem</span>
 
   <p>Preço: R$10,00</p>
@@ -195,7 +103,7 @@
   <button class="add-to-cart">Adicionar ao Carrinho</button>
 </div>
 <div class="product" data-name="Esfirra">
-<img src="https://via.placeholder.com/100" alt="Calça">
+<img src="img/esfirra.jpg" alt="Calça">
 <span>Esfirra Lorem</span>
 
 <p>Preço: R$10,00</p>
@@ -204,7 +112,7 @@
 <button class="add-to-cart">Adicionar ao Carrinho</button>
 </div>
 <div class="product" data-name="Guaraná">
-<img src="https://via.placeholder.com/100" alt="Calça">
+<img src="img/guaraná.jpg" alt="Calça">
 <span>guaraná Lorem</span>
 
 <p>Preço: R$10,00</p>
@@ -214,15 +122,113 @@
 </div>
     </div>
 
+    <div class="spacer"></div>
+    <div>
+        <button class="botao">Ver mais...</button>
+    </div>
+
+
+
+
+    <div class="container">
+        <h2>Serviços</h2>  
+            <div class="products">
+                <div class="product" data-name="Empada">
+                    <img src="img/pastel.jpg" alt="Calça">
+                    <i class="bi bi-person-fill"></i>
+                     <span>Empada Lorem</span>
+                    <p>Preço: R$10,00</p>
+                   
+            <P>Quantidade: <input type="number" min="50" max="999" value="50" class="inpt"></P>
+            <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product" data-name="Pastel">
+         <img src="img/pastel.jpg" alt="Calça">
+          <span>pastel Lorem</span>
+        
+          <p>Preço: R$10,00</p>
+                   
+          <P>Quantidade: <input type="number" min="50" max="999" value="50" class="inpt"></P>
+          <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product" data-name="Esfirra">
+        <img src="img/esfirra.jpg" alt="Calça">
+        <span>Festa Grande</span>
+        <p>Barmans: X </p>
+        <p>Garçons: X </p>
+        <p>Cozinheiros: X </p>
+            <select name="" id="">
+                <option value="Buffet completo">Buffet completo</option>
+                <option value="Apenas entrega">Apenas Entrega</option>
+            </select>
+
+        <p>Preço: R$10,00</p>
+        
+                   
+        <button class="add-to-cart">Adicionar ao Carrinho</button>
+        </div>
+        
+            </div>
+            <div class="spacer"></div>
+         
+
+
+
+
+
+
+         <div class="products perso">
+         <div class="product " data-name="Empada">
+            <img src="img/empada.jpg" width="160px" height="107px" alt="Calça">
+             <span>Empada Lorem</span>
+         
+             <p>Preço: R$10,00</p>
+                    
+             <P>Quantidade: <input type="number" min="50" max="999" value="50" class="inpt"></P>
+             <button class="add-to-cart-custom" onclick="personalizar()" >Personalizar</button>
+         </div>
+         <div class="product pperso" data-name="Empada" id="custom" style="display:none">
+            <img src="img/empada.jpg" width="160px" height="107px" alt="Calça">
+             <span>Empada Lorem</span>
+         
+             <p>Preço: R$10,00</p>
+                    
+             <P>Quantidade: <input type="number" min="50" max="999" value="50" class="inpt"></P>
+             <button class="add-to-cart">Adicionar ao Carrinho</button>
+         </div>
+         </div>
+        </div>
     <div class="cart">
         <h2>Carrinho</h2>
         <ul class="cart-items"></ul>
         <p>Total: R$ <span class="cart-total">0.00</span></p>
-        <button class="checkout">Finalizar Compra</button>
+        <button class="checkout">Prosseguir para agendamento</button>
     </div>
 </div>
 
+<div id="clickme">
+    <button id="bott"> Aqui</button>
+  </div>
+  <img id="book" src="img/empada.jpg" alt="" width="100" height="123">
+
+
     <script>
+
+
+        const custom = document.getElementById('custom');
+        
+        function personalizar(){
+            if(custom.style.display == 'none'){
+                custom.style.display = 'block';
+            } else{
+                custom.style.display = 'none';
+            }
+        }
+
+        
+            
+            
+        
         // JavaScript para adicionar produtos ao carrinho
         document.addEventListener('DOMContentLoaded', function() {
             const addToCartButtons = document.querySelectorAll('.add-to-cart');
@@ -234,7 +240,7 @@
             addToCartButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     const product = button.parentNode.dataset.name;
-                    const price = 0; // Preço aleatório para exemplo
+                    const price = 10; // Preço aleatório para exemplo
                     cart.push({ name: product, price: price });
                     showCart();
                 });
@@ -259,5 +265,8 @@
             });
         });
     </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+    </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </body>
 </html>
